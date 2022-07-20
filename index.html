@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculadora</title>
+
+    <link rel="shortcut icon" href="https://cdn.bioguia.com/embed/3d196185c684c57bdcb7e7ddcad127e1524428476/6_pasos_para_ser_feliz_segun_la_Universidad_de_Harvard?imagick=1&size=500">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kranky&display=swap" rel="stylesheet">
+
+</head>
+
+<style>
+
+    body{
+
+        background-image: url(https://thumbs.dreamstime.com/b/vista-de-arriba-la-mesa-del-roble-rojo-con-tecnolog%C3%ADa-inal%C3%A1mbrica-112627429.jpg);
+
+        background-size: cover;
+
+    }
+
+    form{
+
+        border-radius: 10px;
+
+        width: 350px;
+
+        height: 400px;
+
+        border: solid 2px black;
+
+        text-align: center;
+
+        padding-top: 10px;
+
+        padding-bottom: 10px;
+
+        margin: auto;
+
+        background-color: rgb(241, 196, 69);
+
+    }
+
+    #Caja{
+
+        font-style: bold;
+
+        font-size: 50px;
+
+        font-family: 'Kranky';
+
+        border-color: rgb(0, 0, 0);
+
+        width: 300px;
+
+        height: 70px;
+
+        background-color: rgb(196, 235, 222);
+
+    }
+
+    input{
+
+        font-style: bold;
+
+        height: 40px;
+
+        width: 60px;
+
+        font-size: 30px;
+
+        margin: 8px 0;
+
+        text-align: center;
+
+    }
+
+    .Numeros{
+
+        background-color: rgb(233, 215, 250);
+
+    }
+
+    #Cero{
+
+        width: 60px;
+
+    }
+
+
+    #tecla_borrar{
+
+        color: aliceblue;
+
+        background-color: rgb(167, 42, 42);
+
+    }
+
+    .Signos{
+
+        background-color: rgb(142, 182, 49);
+        font-size: 20px;
+
+    }
+    
+    .intrucciones{
+        background-color: white;
+    }
+    
+    #tecla_igual{
+        width: 320px;
+        height: 50px;
+    }
+
+
+
+</style>
+
+
+
+<script>
+
+    function raizc() {
+
+        var r=document.getElementById("Caja").value;
+
+        var x=Math.sqrt(r)
+
+        calculadora.resultado.value=x;
+
+    }
+    
+    function potencia(){
+        
+        var p=document.getElementById("Caja").value;
+        
+        var q=Math.pow(p,q)
+        
+        calculadora.resultado.value=q;
+    }
+    
+    function coseno(){
+        var c=document.getElementById("Caja").value;
+        
+        var o=Math.cos(c)
+        
+        calculadora.resultado.value=o;
+    }
+    
+    function seno(){
+        var s=document.getElementById("Caja").value;
+        
+        var n=Math.sin(s)
+        calculadora.resultado.value=n;
+    }
+    
+    function Tangente(){
+        var t=document.getElementById("Caja").value;
+        
+        var e=Math.tan(t)
+        calculadora.resultado.value=e;
+    }
+
+    
+
+</script>
+<center>
+<body>
+<h1 class="intrucciones">Para elevar un número a una potencia</h1>
+<p class="intrucciones">Si quieres elevar un número a la potencia, tienes que escribir el número que quieres elevar, luego colocar dos veces el signo de multiplicación, y luego pon el número exponecial al que lo quieres elevar. Ejemplo: <b>2**2= 4</b></p>
+
+
+
+    <form name="calculadora">
+
+        <input id="Caja" type="textfield" name="resultado" value="">
+
+        <br>
+
+       <input class="Numeros" type="button" value="7" onClick="document.calculadora.resultado.value+='7'">
+
+       <input class="Numeros" type="button" value="8" onClick="document.calculadora.resultado.value+='8'">
+
+       <input class="Numeros" type="button" value="9" onClick="document.calculadora.resultado.value+='9'">
+
+       <input class="Signos" id="tecla_dividir" type="button" value="÷" onClick="document.calculadora.resultado.value+='/'">
+
+       <input class="Signos" id="tecla_raiz" type="button" value="√" onclick="raizc()">
+
+       <br>
+
+       <input class="Numeros" type="button" value="4" onClick="document.calculadora.resultado.value+='4'">
+
+       <input class="Numeros" type="button" value="5" onClick="document.calculadora.resultado.value+='5'">
+
+       <input class="Numeros" type="button" value="6" onClick="document.calculadora.resultado.value+='6'">
+
+       <input class="Signos" id="tecla_por" type="button" value="×" onClick="document.calculadora.resultado.value+='*'">
+       
+       <input class="Signos" id="tecla_potencia" type="button" name="pow" value="^" onClick="document.calculadora.resultado.value+='**'"
+
+
+       <br>
+
+       <input class="Numeros" type="button" value="1" onClick="document.calculadora.resultado.value+='1'">
+
+       <input class="Numeros" type="button" value="2" onClick="document.calculadora.resultado.value+='2'">
+
+       <input class="Numeros" type="button" value="3" onClick="document.calculadora.resultado.value+='3'">
+
+       <input class="Signos" id="tecla_menos" type="button" value="-" onClick="document.calculadora.resultado.value+='-'">
+       
+       <input class="Signos" id="tecla_coseno" type="button" value="Cos" onClick="coseno()">
+       
+       
+
+       <br>
+
+       <input class="Numeros" id="Cero" type="button" value="0" onClick="document.calculadora.resultado.value+='0'">
+
+       <input id="tecla_borrar" type="reset" value="C">
+
+       
+
+       <input class="Signos" id="tecla_mas" type="button" value="+" onClick="document.calculadora.resultado.value+='+'">
+       
+       <input class="Signos" id="tecla_seno" type="button" value="SE" onClick="seno()">
+       
+       <input class="Signos" id="tecla_tangente" type="button" value="TA" onClick="Tangente()">
+       
+       <br>
+       
+       <input id="tecla_igual" type="button" value="=" onClick="document.calculadora.resultado.value=eval(document.calculadora.resultado.value)">
+       
+       
+
+    </form>
+
+</body>
+</center>
+
+</html>
